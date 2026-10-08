@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Анкета участника и расписание занятий">
+    <title>Анкета участника — Иван Петров</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #1f4e79;
+        }
+
+        table, th, td {
+            border: 1px solid #999;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8f1fa;
+        }
+
+        form {
+            background: #f7f9fb;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Анкета участника</h1>
+        <p>Заполните форму ниже и посмотрите расписание.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Расписание занятий</h2>
+            <table>
+                <caption>Расписание на осенний семестр 2026 года</caption>
+                <thead>
+                    <tr>
+                        <th>День недели</th>
+                        <th>Предмет</th>
+                        <th>Преподаватель</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Понедельник</td>
+                        <td>Математика</td>
+                        <td>Иванова И. И.</td>
+                    </tr>
+                    <tr>
+                        <td>Вторник</td>
+                        <td>Информатика</td>
+                        <td>Петров П. П.</td>
+                    </tr>
+                    <tr>
+                        <td>Среда</td>
+                        <td>Физика</td>
+                        <td>Сидорова С. С.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Всего занятий в неделю: 3</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>Анкета участника</h2>
+            <form action="#" method="get">
+                <label for="name">Имя и фамилия</label>
+                <input type="text" id="name" name="name" placeholder="Иван Петров" required>
+
+                <label for="email">Электронная почта</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label>Ваш пол</label>
+                <label>
+                    <input type="radio" name="gender" value="male">
+                    Мужской
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" checked>
+                    Женский
+                </label>
+
+                <label>Ваши увлечения</label>
+                <label>
+                    <input type="checkbox" name="hobby" value="coding">
+                    Программирование
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="sport">
+                    Спорт
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="music">
+                    Музыка
+                </label>
+
+                <label for="direction">Направление обучения</label>
+                <select id="direction" name="direction">
+                    <option value="web">Веб-разработка</option>
+                    <option value="design">Веб-дизайн</option>
+                    <option value="data">Анализ данных</option>
+                </select>
+
+                <label for="birthday">Дата рождения</label>
+                <input type="date" id="birthday" name="birthday">
+
+                <label for="about">Пара слов о себе</label>
+                <textarea id="about" name="about" rows="3" cols="40" placeholder="Что вас вдохновляет?"></textarea>
+
+                <button type="submit">Отправить анкету</button>
+            </form>
+        </section>
+    </main>
+
+    <meta charset="UTF-8">
+    <title>Задание по HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        table { border-collapse: collapse; width: 100%; max-width: 600px; margin-top: 20px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        tfoot td { background-color: #e9e9e9; font-weight: bold; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="tel"], input[type="number"] { padding: 8px; width: 100%; max-width: 300px; border: 1px solid #ccc; border-radius: 4px; }
+        iframe { margin-top: 20px; max-width: 100%; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+
+    <h2>Анкета</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="user_phone" placeholder="+7 (999) 123-45-67">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" name="user_age" min="14" max="100" placeholder="От 14 до 50">
+        </div>
+        
+        <button type="submit">Отправить</button>
+    </form>
+
+    <hr>
+
+    <h2>Успеваемость</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Предмет</th>
+                <th>Оценка</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Иван</td>
+                <td>Математика</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Мария</td>
+                <td>Физика</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Алексей</td>
+                <td>Информатика</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td rowspan="2">Итого:</td>
+                <td>Средний балл</td>
+                <td>4.6</td>
+            </tr>
+            <tr>
+                <td>Всего оценок</td>
+                <td>3</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <h2>Полезное видео</h2>
+    <iframe width="560" height="315" 
+            src="https://www.youtube.com/watch?v=9mQN4E6ur-w&t=270s" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+    </iframe>
+    <footer>
+        <p>© 2026, Иван Петров</p>
+    </footer>
+</body>
+</html>
